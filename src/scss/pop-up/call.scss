@@ -1,0 +1,21 @@
+.modal-call {
+  width: 320px;
+  height: 676px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-320px);
+  transition-duration: 0.5s;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.modal-call--open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 6;
+  transform: translateX(0);
+}

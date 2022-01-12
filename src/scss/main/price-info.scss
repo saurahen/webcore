@@ -1,0 +1,36 @@
+@import 'src/scss/variables';
+.price-info {
+  margin: 0 0 0 16px;
+  &__text {
+    font-size: rem(14);
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    padding-right: 50px;
+  }
+
+  &__link-container {
+    padding-right: 50px;
+    margin-bottom: 50px;
+  }
+
+  &__special {
+    position: relative;
+    font-family: $medium;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border: 3px solid $btn-red;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 5px 0 5px 0;
+      transform: rotate(45deg);
+      bottom: 5px;
+      right: -15px;
+    }
+  }
+}

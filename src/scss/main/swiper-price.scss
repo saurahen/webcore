@@ -1,0 +1,123 @@
+@import 'src/scss/variables';
+.swiper-price {
+  overflow: hidden;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 200px;
+    z-index: 2;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+  }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &__wrapper {
+    height: 215px;
+  }
+
+  &__slide {
+    width: auto;
+    margin-left: 8px;
+  }
+
+  &__container {
+    position: relative;
+    background-color: $bg-white;
+    box-sizing: border-box;
+    width: 260px;
+    height: 200px;
+    border-radius: 6px;
+  }
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}
+
+.repair-services {
+  padding: 16px 0 0 16px;
+}
+
+.title-services {
+  font-size: rem(14);
+  font-family: $medium;
+  line-height: 16px;
+  color: $gray-text;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+}
+
+.repair-service-text {
+  margin: 0;
+  padding: 5px 0 0 16px;
+}
+
+.text-services {
+  font-size: rem(14);
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.repair-price {
+  padding: 16px 0 0 16px;
+  margin: 0 4px 0 0;
+}
+
+.repair-price-value {
+  margin: 0;
+  padding: 5px 0 0 16px;
+}
+
+.repair-term {
+  padding: 16px 0 0 16px;
+  margin: 0 4px 0 0;
+}
+
+.repair-term-value {
+  margin: 0;
+  padding: 5px 0 0 16px;
+}
+
+.to-order-button {
+  position: absolute;
+  color: white;
+  font-family: $bold;
+  right: 15px;
+  bottom: 14px;
+  border: 1px solid $btn-red;
+  background-color: $btn-red;
+  border-radius: 16px;
+  width: 119px;
+  height: 32px;
+  padding-right: 30px;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 3px solid white;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 5px 0 5px 0;
+    transform: rotate(45deg);
+    right: 15px;
+    top: 10px;
+  }
+}
+
+.button {
+}
+
+.swiper-pagination-price {
+  text-align: center;
+}

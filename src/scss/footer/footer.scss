@@ -1,0 +1,26 @@
+@import 'src/scss/variables';
+.main-footer {
+  height: 147px;
+  border-top: 1px solid $border-light-green;
+  display: flex;
+  flex-direction: column;
+  font-family: $medium;
+  font-size: rem(14);
+  line-height: 16px;
+  color: $gray-text;
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+}
+
+.copyright {
+  margin-bottom: 5px;
+}
+
+.politics {
+  margin-bottom: 3px;
+}
+
+.offer {
+  padding-bottom: 19px;
+}

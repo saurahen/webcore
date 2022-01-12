@@ -1,0 +1,123 @@
+@import 'src/scss/variables';
+.feedback {
+  width: 320px;
+  height: 676px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-320px);
+  transition-duration: 0.5s;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+  overflow: hidden;
+}
+.close-button {
+  margin: 24px 0 36px 16px;
+}
+
+.feedback--open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 6;
+  transform: translateX(0);
+}
+
+.modal {
+}
+
+.button {
+}
+
+.modal-title {
+  position: relative;
+  margin: 0 0 20px 16px;
+  font-family: $bold;
+  font-size: rem(24);
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    transform: rotate(90deg);
+    width: 40px;
+    border-top: 8px solid #41f6d7;
+    border-radius: 50px;
+    left: -35px;
+    top: 13px;
+  }
+}
+
+.form {
+  margin-left: 16px;
+}
+
+.input {
+  margin-bottom: 16px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  width: 288px;
+  height: 48px;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.textarea {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  width: 288px;
+  height: 118px;
+  padding-left: 16px;
+  padding-top: 12px;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+.politics {
+  margin: 0 0 26px 16px;
+  padding-right: 20px;
+  &__text {
+    font-size: rem(14);
+    font-family: $medium;
+    color: $gray-text;
+    line-height: 16px;
+  }
+  &__link {
+    color: $btn-red;
+  }
+}
+
+.send-btn {
+  position: relative;
+  color: white;
+  font-family: $bold;
+  font-size: rem(12);
+  line-height: 24px;
+  border: 1px solid $btn-red;
+  background-color: $btn-red;
+  border-radius: 16px;
+  width: 136px;
+  height: 32px;
+  padding-right: 30px;
+  transform: translate(150px, 3px);
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 3px solid white;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 5px 0 5px 0;
+    transform: rotate(45deg);
+    right: 18px;
+    top: 9px;
+  }
+}

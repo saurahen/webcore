@@ -1,0 +1,72 @@
+@import 'src/scss/variables';
+.main {
+  &__header {
+  }
+
+  &__title {
+    position: relative;
+    margin-left: 16px;
+    font-family: $bold;
+    font-size: rem(28);
+    line-height: 40px;
+    letter-spacing: -0.6px;
+  }
+  &__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    transform: rotate(90deg);
+    width: 40px;
+    border-top: 8px solid #41f6d7;
+    border-radius: 50px;
+    left: -35px;
+    top: 16px;
+  }
+
+  &__menu {
+    color: $gray-text;
+    display: flex;
+    font-family: $medium;
+    overflow: auto;
+    margin-top: 25px;
+    margin-left: 18px;
+  }
+  &__menu::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.menu {
+  &__list {
+    white-space: nowrap;
+    padding: 7px 14px;
+    margin-right: 7px;
+    border: 2px solid transparent;
+    letter-spacing: -0.2px;
+  }
+
+  &__list:hover {
+    background-color: #fff;
+    border: 2px solid #41f6d7;
+    border-radius: 5px;
+  }
+
+  &__link {
+  }
+}
+
+@media (max-width: 767px) {
+  .main__menu::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 190px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+  }
+}

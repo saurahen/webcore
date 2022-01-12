@@ -1,0 +1,16 @@
+@import 'reset';
+@import 'fonts';
+@import 'variables';
+@import 'header/header';
+@import 'main/main';
+@import 'footer/footer';
+@import 'pop-up/burger';
+@import 'pop-up/feedback';
+@import 'pop-up/call';
+
+.wrapper {
+  height: 100%;
+  background-color: $bg-primary;
+  max-width: rem(1120);
+  margin: 0 auto;
+}

@@ -1,0 +1,64 @@
+@import '../variables';
+.header {
+  display: flex;
+  height: 88px;
+  background-color: $bg-white;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #d9fff5;
+  &__burger {
+    margin-left: 17px;
+  }
+
+  &__logo {
+    margin-left: 17px;
+  }
+
+  &__call {
+  }
+
+  &__chat {
+  }
+
+  &__profile {
+  }
+
+  &__repair {
+    margin-right: 16px;
+  }
+
+  &__check-status {
+  }
+}
+
+.repair-block {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: 15px;
+}
+.repair-block::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 32px;
+  border-top: 2px solid #eaeaea;
+  transform: rotate(90deg);
+  right: 101px;
+  top: 19px;
+}
+
+.btn-circle {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: $btn-red;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .contact {
+    display: none;
+  }
+}
