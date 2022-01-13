@@ -7,6 +7,7 @@ body {
   padding: 0;
   font-family: "TT Lakes Regular";
   background-color: #f2f2f2;
+  height: 100vh;
 }
 
 h1,
@@ -82,13 +83,24 @@ button:hover {
 .header__logo {
   margin-left: 17px;
 }
+.header__call {
+  margin-right: 16px;
+}
+.header__chat {
+  margin-right: 16px;
+}
 .header__repair {
   margin-right: 16px;
 }
+.contact {
+  display: flex;
+  margin-left: auto;
+  margin-right: 42px;
+}
+
 .repair-block {
   position: relative;
   display: flex;
-  margin-left: auto;
   margin-right: 15px;
 }
 
@@ -113,9 +125,25 @@ button:hover {
   justify-content: center;
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .header__burger {
+    margin-left: 23px;
+  }
+  .header__logo {
+    margin-left: 40px;
+  }
+
+  .repair-block {
+    margin-right: 25px;
+  }
+}
 @media (max-width: 767px) {
   .contact {
     display: none;
+  }
+
+  .repair-block {
+    margin-left: auto;
   }
 }
 /* Шрифты*/
@@ -266,6 +294,24 @@ button:hover {
   top: 11px;
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .about-company {
+    display: flex;
+  }
+  .about-company__text {
+    padding-right: 50px;
+  }
+  .about-company__text--hiden {
+    padding-right: 50px;
+    height: 125px;
+    overflow: hidden;
+  }
+  .about-company__photo {
+    width: 355px;
+    height: 209px;
+    border-radius: 5px;
+  }
+}
 @media (max-width: 767px) {
   .about-company__text--hiden {
     height: 110px;
@@ -365,12 +411,37 @@ button:hover {
   margin-right: 8px !important;
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .swiper-brand::after {
+    content: none;
+  }
+  .swiper-brand__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 175px;
+    width: 97%;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .swiper-brand__slide {
+    margin: auto;
+    height: 90px;
+  }
+
+  .swiper-slide__item-brand {
+    width: 224px;
+  }
+
+  .swiper-pagination-brand {
+    display: none;
+  }
+}
 /* Шрифты*/
 /*Цвета*/
 /*Размер шрифта*/
 .swiper-technics {
   position: relative;
-  overflow: auto;
+  overflow: hidden;
 }
 .swiper-technics::after {
   content: "";
@@ -432,9 +503,30 @@ button:hover {
   text-align: center;
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .swiper-technics__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    height: 100%;
+    padding: 0;
+    margin: 0 0 0 24px;
+  }
+  .swiper-technics__slide {
+    width: auto;
+    margin: 0;
+  }
+  .swiper-technics__link {
+    width: 190px;
+  }
+
+  .swiper-pagination-technics {
+    display: none;
+  }
+}
 .price-header {
   height: 56px;
-  margin-top: -5px;
+  margin-top: 10px;
 }
 
 /* Шрифты*/
@@ -520,6 +612,10 @@ button:hover {
 .to-order-button {
   position: absolute;
   color: white;
+  font-size: 0.75rem;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  line-height: 24px;
   font-family: "TT Lakes Bold";
   right: 15px;
   bottom: 14px;
@@ -548,6 +644,68 @@ button:hover {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .swiper-price::after {
+    content: none;
+  }
+  .swiper-price__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 92%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding-left: 16px;
+    align-items: center;
+    margin: auto;
+  }
+  .swiper-price__slide {
+    position: relative;
+    width: 96%;
+  }
+  .swiper-price__slide:not(:last-child) {
+    border-bottom: 1px solid #eaeaea;
+  }
+  .swiper-price__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 64px;
+    border-radius: 0;
+  }
+
+  .title-services {
+    display: none;
+  }
+
+  .repair-service-text {
+    width: 400px;
+    padding: 0;
+  }
+
+  .repair-price-value {
+    width: 75px;
+    margin-right: 21px;
+    padding: 0;
+  }
+
+  .repair-term-value {
+    width: 75px;
+    padding: 0;
+  }
+
+  .to-order-button {
+    position: relative;
+    display: block;
+    transform: translate(50%, 50%);
+  }
+
+  .swiper-pagination-price {
+    display: none;
+  }
+}
 /* Шрифты*/
 /*Цвета*/
 /*Размер шрифта*/
@@ -559,6 +717,7 @@ button:hover {
   line-height: 20px;
   letter-spacing: 0.2px;
   padding-right: 50px;
+  max-width: 421px;
 }
 .price-info__link-container {
   padding-right: 50px;
