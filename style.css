@@ -30,6 +30,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a:hover {
+  opacity: 0.7;
+}
 
 button {
   border: 0;
@@ -92,6 +95,7 @@ button:hover {
 .header__repair {
   margin-right: 16px;
 }
+
 .contact {
   display: flex;
   margin-left: auto;
@@ -125,7 +129,12 @@ button:hover {
   justify-content: center;
 }
 
-@media (min-width: 768px) and (max-width: 1120px) {
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1119px) {
   .header__burger {
     margin-left: 23px;
   }
@@ -192,6 +201,54 @@ button:hover {
   border: 2px solid #41f6d7;
   border-radius: 5px;
 }
+@media (min-width: 768px) {
+  .con {
+    display: none;
+  }
+}
+@media (min-width: 1120px) {
+  .main__menu {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .con {
+    padding-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+  }
+
+  .repair-block {
+    margin: 0;
+  }
+  .repair-block::before {
+    content: none;
+  }
+
+  .header__repair {
+    margin-right: 160px;
+  }
+  .header__check-status {
+    white-space: nowrap;
+  }
+
+  .repair-text {
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    white-space: nowrap;
+    margin-right: 17px;
+    margin-left: -140px;
+  }
+
+  .checkstatus-text {
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    white-space: nowrap;
+    margin-right: 23px;
+    margin-left: -140px;
+  }
+}
 @media (max-width: 767px) {
   .main__menu::after {
     content: "";
@@ -201,6 +258,10 @@ button:hover {
     width: 30px;
     height: 30px;
     background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  }
+
+  .con {
+    display: none;
   }
 }
 /* Шрифты*/
@@ -294,7 +355,7 @@ button:hover {
   top: 11px;
 }
 
-@media (min-width: 768px) and (max-width: 1120px) {
+@media (min-width: 768px) {
   .about-company {
     display: flex;
   }
@@ -312,8 +373,24 @@ button:hover {
     border-radius: 5px;
   }
 }
+@media (min-width: 1120px) {
+  .about-company__text--hidden {
+    padding-right: 50px;
+    height: 125px;
+    overflow: hidden;
+  }
+  .about-company__photo-container {
+    margin-right: 30px;
+    max-width: 100%;
+    height: 100%;
+  }
+  .about-company__photo {
+    width: 500px;
+    height: 100%;
+  }
+}
 @media (max-width: 767px) {
-  .about-company__text--hiden {
+  .about-company__text--hidden {
     height: 110px;
     overflow: hidden;
   }
@@ -426,6 +503,9 @@ button:hover {
   .swiper-brand__slide {
     margin: auto;
     height: 90px;
+  }
+  .swiper-brand__slide:hover {
+    filter: brightness(90%);
   }
 
   .swiper-slide__item-brand {
@@ -572,7 +652,7 @@ button:hover {
   top: 11px;
 }
 
-@media (min-width: 768px) and (max-width: 1120px) {
+@media (min-width: 768px) {
   .swiper-technics::after {
     content: none;
   }
@@ -588,6 +668,9 @@ button:hover {
   .swiper-technics__slide {
     margin: auto;
     height: 185px;
+  }
+  .swiper-technics__slide:hover {
+    filter: brightness(90%);
   }
   .swiper-technics__link {
     width: 190px;
@@ -921,6 +1004,24 @@ button:hover {
     padding: 40px 0 0 0;
   }
 }
+.overlay {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transition-duration: 0.5s;
+}
+
+.o--open {
+  opacity: 0.96;
+  visibility: visible;
+  z-index: 3;
+}
+
 /* Шрифты*/
 /*Цвета*/
 /*Размер шрифта*/
@@ -968,26 +1069,8 @@ button:hover {
   transform: translateX(0);
 }
 
-.overlay {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  transition-duration: 0.5s;
-}
-
-.o--open {
-  opacity: 0.96;
-  visibility: visible;
-  z-index: 3;
-}
-
 .burger-menu {
-  padding: 24px 0 0 15px;
+  padding: 24px 0 0 24px;
   flex: 1 0 auto;
 }
 .burger-menu__item {
@@ -1008,7 +1091,7 @@ button:hover {
 .burger-menu__link:hover::before {
   content: "";
   position: absolute;
-  left: -30px;
+  left: -40px;
   top: 5px;
   border-top: 8px solid #41f6d7;
   border-radius: 5px;
@@ -1068,7 +1151,31 @@ button:hover {
   padding: 1px 0 1px 6px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1760px) {
+  .burger {
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    width: 320px;
+    transform: translateX(0);
+    box-shadow: none;
+    left: -320px;
+    transition-duration: 0s;
+  }
+  .burger__close-button {
+    display: none;
+  }
+  .burger__logo {
+    margin-left: 22px;
+  }
+  .burger__menu {
+    margin-bottom: 216px;
+  }
+  .burger__footer {
+    margin-top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1759px) {
   .burger {
     width: 320px;
   }
@@ -1226,6 +1333,7 @@ button:hover {
 }
 
 .wrapper {
+  position: relative;
   height: 100%;
   background-color: #f8f8f8;
   max-width: 70rem;

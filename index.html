@@ -39,7 +39,19 @@
       </header>
       <main class="main">
         <div class="main__header">
-          <h1 class="main__title">Услуги и сервисы</h1>
+          <div class="con">
+            <h1 class="main__title">Услуги и сервисы</h1>
+            <div class="repair-block">
+              <button class="header__repair btn-circle">
+                <span class="repair-text">Оставить заявку</span>
+                <img src="./img/icons/repair.svg" alt="repair">
+              </button>
+              <button class="header__check-status btn-circle">
+                <span class="checkstatus-text">Статус ремонта</span>
+                <img src="./img/icons/check.svg" alt="check-status">
+              </button>
+            </div>
+          </div>
           <ul class="main__menu menu">
             <li class="menu__list">
               <a href="" class="menu__link">Ремонтируемые устройства</a>
@@ -316,73 +328,74 @@
           </p>
         </footer>
       </main>
-    </div>
-    <div class="overlay"></div>
-    <div class="burger">
-      <div class="burger__header">
-        <button class="burger__close-button btn-circle button">
-          <img src="./img/icons/close.svg" alt="">
-        </button>
-        <img src="./img/logo.svg" alt="" class="burger__logo">
-        <button class="burger__search-button btn-circle button">
-          <img src="./img/icons/search.svg" alt="">
-        </button>
-      </div>
-      <div class="burger__menu">
-        <ul class="burger-menu">
-          <li class="burger-menu__item">
-            <a href="#" class="burger-menu__link">Ремонт техники</a>
-          </li>
-          <li class="burger-menu__item">
-            <a href="#" class="burger-menu__link">Услуги и сервисы</a>
-          </li>
-          <li class="burger-menu__item">
-            <a href="#" class="burger-menu__link">Корпоративным клиентам</a>
-          </li>
-          <li class="burger-menu__item">
-            <a href="#" class="burger-menu__link">Продавцам техники</a>
-          </li>
-          <li class="burger-menu__item">
-            <a href="#" class="burger-menu__link">Партнерам</a>
-          </li>
-          <li class="burger-menu__item">
-            <a href="#" class="burger-menu__link">Производителям</a>
-          </li>
-          <li class="burger-menu__item">
-            <a href="#" class="burger-menu__link">Наши сервисные центры</a>
-          </li>
-          <li class="burger-menu__item">
-            <a href="#" class="burger-menu__link">Контакты</a>
-          </li>
-        </ul>
-      </div>
-      <div class="burger__footer">
-        <div class="footer-contact-buttons">
-          <button class="btn-circle footer-contact-buttons__item call button">
-            <img src="./img/icons/call.svg" alt=""></button><button class="btn-circle footer-contact-buttons__item chat button">
-            <img src="./img/icons/chat.svg" alt=""></button><button class="btn-circle footer-contact-buttons__item profile button">
-            <img src="./img/icons/person.svg" alt="">
+      <div class="burger">
+        <div class="burger__header">
+          <button class="burger__close-button btn-circle button">
+            <img src="./img/icons/close.svg" alt="">
+          </button>
+          <img src="./img/logo.svg" alt="" class="burger__logo">
+          <button class="burger__search-button btn-circle button">
+            <img src="./img/icons/search.svg" alt="">
           </button>
         </div>
-        <div class="footer-contact">
-          <a href="mailto:mail@sps.com" class="footer-email">mail@sps.com</a>
-          <a href="tel:+78008908900" class="footer-phone">8 800 890 8900</a>
-        </div>
-        <div class="change-lang">
-          <ul class="change-lang__list">
-            <li class="change-lang__item">
-              <button class="button change-lang__button">RU</button>
+        <div class="burger__menu">
+          <ul class="burger-menu">
+            <li class="burger-menu__item">
+              <a href="#" class="burger-menu__link">Ремонт техники</a>
             </li>
-            <li class="change-lang__item">
-              <button class="button change-lang__button">EN</button>
+            <li class="burger-menu__item">
+              <a href="#" class="burger-menu__link">Услуги и сервисы</a>
             </li>
-            <li class="change-lang__item">
-              <button class="button change-lang__button">CH</button>
+            <li class="burger-menu__item">
+              <a href="#" class="burger-menu__link">Корпоративным клиентам</a>
+            </li>
+            <li class="burger-menu__item">
+              <a href="#" class="burger-menu__link">Продавцам техники</a>
+            </li>
+            <li class="burger-menu__item">
+              <a href="#" class="burger-menu__link">Партнерам</a>
+            </li>
+            <li class="burger-menu__item">
+              <a href="#" class="burger-menu__link">Производителям</a>
+            </li>
+            <li class="burger-menu__item">
+              <a href="#" class="burger-menu__link">Наши сервисные центры</a>
+            </li>
+            <li class="burger-menu__item">
+              <a href="#" class="burger-menu__link">Контакты</a>
             </li>
           </ul>
         </div>
+        <div class="burger__footer">
+          <div class="footer-contact-buttons">
+            <button class="btn-circle footer-contact-buttons__item call button">
+              <img src="./img/icons/call.svg" alt=""></button><button class="btn-circle footer-contact-buttons__item chat button">
+              <img src="./img/icons/chat.svg" alt=""></button><button class="btn-circle footer-contact-buttons__item profile button">
+              <img src="./img/icons/person.svg" alt="">
+            </button>
+          </div>
+          <div class="footer-contact">
+            <a href="mailto:mail@sps.com" class="footer-email">mail@sps.com</a>
+            <a href="tel:+78008908900" class="footer-phone">8 800 890 8900</a>
+          </div>
+          <div class="change-lang">
+            <ul class="change-lang__list">
+              <li class="change-lang__item">
+                <button class="button change-lang__button">RU</button>
+              </li>
+              <li class="change-lang__item">
+                <button class="button change-lang__button">EN</button>
+              </li>
+              <li class="change-lang__item">
+                <button class="button change-lang__button">CH</button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="overlay"></div>
+
     <div class="feedback">
       <button class="close-button btn-circle button">
         <img src="./img/icons/close.svg" alt="">
