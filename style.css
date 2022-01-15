@@ -1016,6 +1016,18 @@ button:hover {
   transition-duration: 0.5s;
 }
 
+.burger__overlay {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transition-duration: 0.5s;
+}
+
 .o--open {
   opacity: 0.96;
   visibility: visible;
@@ -1215,7 +1227,7 @@ button:hover {
 .feedback--open {
   opacity: 1;
   visibility: visible;
-  z-index: 6;
+  z-index: 7;
   transform: translateX(0);
 }
 
@@ -1328,7 +1340,7 @@ button:hover {
 .modal-call--open {
   opacity: 1;
   visibility: visible;
-  z-index: 6;
+  z-index: 7;
   transform: translateX(0);
 }
 
@@ -1342,6 +1354,12 @@ button:hover {
 
 .body--overflow {
   overflow: hidden;
+}
+
+@media (min-width: 1760px) {
+  .wrapper {
+    transform: translateX(160px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map*/
