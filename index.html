@@ -54,31 +54,31 @@
           </div>
           <ul class="main__menu menu">
             <li class="menu__list">
-              <a href="" class="menu__link">Ремонтируемые устройства</a>
+              <a href="#technics" class="menu__link">Ремонтируемые устройства</a>
             </li>
             <li class="menu__list">
-              <a href="" class="menu__link">Дополнительные услуги</a>
+              <a href="#brand" class="menu__link">Бренды</a>
             </li>
             <li class="menu__list">
-              <a href="" class="menu__link">Цены на услуги</a>
+              <a href="#price" class="menu__link">Цены на услуги</a>
             </li>
             <li class="menu__list">
-              <a href="" class="menu__link">Адреса сервисных центров</a>
+              <a href="#technics" class="menu__link">Адреса сервисных центров</a>
             </li>
             <li class="menu__list">
-              <a href="" class="menu__link">Специальные цены</a>
+              <a href="#brand" class="menu__link">Специальные цены</a>
             </li>
             <li class="menu__list">
-              <a href="" class="menu__link">Специальные цены</a>
+              <a href="#technics" class="menu__link">Специальные цены</a>
             </li>
             <li class="menu__list">
-              <a href="" class="menu__link">Специальные цены</a>
+              <a href="#price" class="menu__link">Специальные цены</a>
             </li>
             <li class="menu__list">
-              <a href="" class="menu__link">Специальные цены</a>
+              <a href="#brand" class="menu__link">Специальные цены</a>
             </li>
             <li class="menu__list">
-              <a href="" class="menu__link">Специальные цены</a>
+              <a href="#technics" class="menu__link">Специальные цены</a>
             </li>
           </ul>
         </div>
@@ -106,8 +106,10 @@
           </div>
         </section>
         <section class="brand">
-          <div class="info-header">
-            <h2 class="info-header__title">Ремонт техники различных брендов</h2>
+          <div class="info-header brand__info">
+            <h2 class="info-header__title brand__info-title" id="brand">
+              Ремонт техники различных брендов
+            </h2>
           </div>
           
           <div class="swiper-brand">
@@ -169,7 +171,9 @@
         </section>
         <section class="technics">
           <div class="info-header">
-            <h2 class="info-header__title">Ремонт различных видов техники</h2>
+            <h2 class="info-header__title" id="technics">
+              Ремонт различных видов техники
+            </h2>
           </div>
           
           <div class="swiper-technics">
@@ -213,7 +217,9 @@
         </section>
         <section class="price">
           <div class="info-header price-header">
-            <h2 class="info-header__title price-title">Цены на услуги</h2>
+            <h2 class="info-header__title price-title" id="price">
+              Цены на услуги
+            </h2>
           </div>
           
           <div class="swiper-price">
@@ -229,7 +235,7 @@
             <div class="swiper-wrapper swiper-price__wrapper">
               
               <div class="swiper-slide swiper-price__slide">
-                <div class="swiper-price__container r-top">
+                <div class="swiper-price__container">
                   <h3 class="repair-services title-services">
                     Ремонтные услуги
                   </h3>
@@ -287,7 +293,7 @@
                 </div>
               </div>
               <div class="swiper-slide swiper-price__slide">
-                <div class="swiper-price__container r-bottom">
+                <div class="swiper-price__container">
                   <h3 class="repair-services title-services">
                     Ремонтные услуги
                   </h3>
@@ -395,7 +401,7 @@
         <div class="burger__overlay"></div>
       </div>
       <div class="feedback">
-        <button class="close-button btn-circle button">
+        <button class="close-button btn-circle button f-btn">
           <img src="./img/icons/close.svg" alt="">
         </button>
         <h1 class="modal-title">Обратная связь</h1>
@@ -405,6 +411,7 @@
           <input class="input" type="email" name="mail" id="email" placeholder="Электронная почта">
           <textarea class="textarea" name="message" id="textarea" placeholder="Сообщение"></textarea>
         </form>
+
         <div class="politics">
           <p class="politics__text">
             Нажимая “отправить”, вы даете согласие на
@@ -416,7 +423,7 @@
         </div>
       </div>
       <div class="modal-call">
-        <button class="close-button btn-circle button">
+        <button class="close-button btn-circle button c-btn">
           <img src="./img/icons/close.svg" alt="">
         </button>
         <h1 class="modal-title">Заказать звонок</h1>
@@ -434,6 +441,9 @@
         </div>
       </div>
       <div class="overlay"></div>
+      <button class="close-button btn-circle button modal-close">
+        <img src="./img/icons/close.svg" alt="">
+      </button>
     </div>
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
