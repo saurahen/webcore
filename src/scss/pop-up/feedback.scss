@@ -115,9 +115,17 @@
     top: 9px;
   }
 }
+.modal-close {
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+}
 @media (min-width: 1440px) {
   .feedback {
     width: 440px;
+  }
+  .modal-title {
+    margin-top: 40px;
   }
   .form {
     margin-left: 32px;
@@ -133,5 +141,20 @@
   }
   .send-btn {
     transform: translate(230px, 3px);
+  }
+  .f-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 1760px) {
+  .modal-close--visible {
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+    position: absolute;
+    top: 35px;
+    right: 473px;
+    z-index: 10;
   }
 }

@@ -9,8 +9,7 @@ const closeBtnAll = document.querySelectorAll('.close-button');
 const chatBtnAll = document.querySelectorAll('.chat');
 const callBtnAll = document.querySelectorAll('.call');
 const body = document.querySelector('body');
-const screen = window.matchMedia('(min-width: 1760px)');
-const screenM = window.matchMedia('(max-width: 1760px)');
+const modalClose = document.querySelector('.modal-close');
 
 for (let i = 0; i < closeBtnAll.length; i++) {
   let closeBtn = closeBtnAll[i];
@@ -20,6 +19,7 @@ for (let i = 0; i < closeBtnAll.length; i++) {
     overlay.classList.remove('o--open');
     burgerOverlay.classList.remove('o--open');
     body.classList.remove('body--overflow');
+    modalClose.classList.remove('modal-close--visible');
   });
 }
 
@@ -30,6 +30,7 @@ overlay.addEventListener('click', function () {
   call.classList.remove('modal-call--open');
   body.classList.remove('body--overflow');
   burgerOverlay.classList.remove('o--open');
+  modalClose.classList.remove('modal-close--visible');
 });
 burgerOverlay.addEventListener('click', function () {
   burgerOverlay.classList.remove('o--open');
@@ -37,15 +38,14 @@ burgerOverlay.addEventListener('click', function () {
   call.classList.remove('modal-call--open');
   overlay.classList.remove('o--open');
   body.classList.remove('body--overflow');
+  modalClose.classList.remove('modal-close--visible');
 });
 
 // BURGER
 burgerBtnOpen.addEventListener('click', function () {
   modal.classList.add('burger--open');
   overlay.classList.add('o--open');
-  if (screenM.matches) {
-    body.classList.add('body--overflow');
-  }
+  body.classList.add('body--overflow');
 });
 burgerBtnClose.addEventListener('click', function () {
   modal.classList.remove('burger--open');
@@ -66,12 +66,11 @@ for (let i = 0; i < chatBtnAll.length; i++) {
   btn.addEventListener('click', function () {
     feedback.classList.add('feedback--open');
     overlay.classList.add('o--open');
-    if (screenM.matches) {
-      body.classList.add('body--overflow');
-    }
+    body.classList.add('body--overflow');
     modal.classList.remove('burger--open');
     call.classList.remove('modal-call--open');
     burgerOverlay.classList.add('o--open');
+    modalClose.classList.add('modal-close--visible');
   });
 }
 
@@ -81,26 +80,10 @@ for (let i = 0; i < callBtnAll.length; i++) {
   btn.addEventListener('click', function () {
     call.classList.add('modal-call--open');
     overlay.classList.add('o--open');
-    if (screenM.matches) {
-      body.classList.add('body--overflow');
-    }
+    body.classList.add('body--overflow');
     modal.classList.remove('burger--open');
     feedback.classList.remove('feedback--open');
-
+    modalClose.classList.add('modal-close--visible');
     burgerOverlay.classList.add('o--open');
   });
-}
-
-// Если модалка открыта в разрешение меньше 1760 и потом растягивается до 1760
-// Чтобы листать страницу
-
-if (matchMedia) {
-  screen.addListener(changes);
-  changes(screen);
-}
-
-function changes() {
-  if (screen.matches) {
-    body.classList.remove('body--overflow');
-  }
 }
