@@ -139,7 +139,18 @@ button:hover {
     margin-left: 23px;
   }
   .header__logo {
+    position: relative;
     margin-left: 40px;
+  }
+  .header__logo::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 32px;
+    border-top: 2px solid #eaeaea;
+    transform: rotate(90deg);
+    left: -35px;
+    top: 30px;
   }
 
   .repair-block {
@@ -185,6 +196,15 @@ button:hover {
   margin-top: 25px;
   margin-left: 18px;
 }
+.main__menu::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 190px;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+}
 .main__menu::-webkit-scrollbar {
   width: 0;
 }
@@ -202,7 +222,7 @@ button:hover {
   border-radius: 5px;
 }
 @media (min-width: 768px) {
-  .con {
+  .main__repair-block {
     display: none;
   }
 }
@@ -210,6 +230,9 @@ button:hover {
   .main__menu {
     flex-wrap: wrap;
     margin-bottom: 10px;
+  }
+  .main__menu::after {
+    content: none;
   }
 
   .con {
@@ -250,17 +273,7 @@ button:hover {
   }
 }
 @media (max-width: 767px) {
-  .main__menu::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 190px;
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-  }
-
-  .con {
+  .main__repair-block {
     display: none;
   }
 }
@@ -1209,7 +1222,7 @@ button:hover {
   width: 320px;
   height: 100%;
   overflow: auto;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #fff;
@@ -1326,7 +1339,7 @@ button:hover {
   width: 320px;
   overflow: auto;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #fff;
