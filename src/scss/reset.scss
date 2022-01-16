@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: $regular;
   background-color: $bg-secondary;
+  min-height: 100vh;
 }
 
 h1,
@@ -26,6 +27,9 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 button {
   border: 0;

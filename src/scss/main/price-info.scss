@@ -6,6 +6,7 @@
     line-height: 20px;
     letter-spacing: 0.2px;
     padding-right: 50px;
+    max-width: 421px;
   }
 
   &__link-container {
@@ -31,6 +32,12 @@
       transform: rotate(45deg);
       bottom: 5px;
       right: -15px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .price-info {
+    &__text {
     }
   }
 }

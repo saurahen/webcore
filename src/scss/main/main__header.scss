@@ -30,6 +30,19 @@
     overflow: auto;
     margin-top: 25px;
     margin-left: 18px;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 190px;
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(
+        270deg,
+        #f8f8f8 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+    }
   }
   &__menu::-webkit-scrollbar {
     width: 0;
@@ -54,19 +67,61 @@
   &__link {
   }
 }
+@media (min-width: 768px) {
+  .main__repair-block {
+    display: none;
+  }
+}
+@media (min-width: 1120px) {
+  .main {
+    &__menu {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      &::after {
+        content: none;
+      }
+    }
+  }
+  .con {
+    padding-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+  }
 
+  .repair-block {
+    margin: 0;
+    &::before {
+      content: none;
+    }
+  }
+
+  .header {
+    &__repair {
+      margin-right: 160px;
+    }
+    &__check-status {
+      white-space: nowrap;
+    }
+  }
+  .repair-text {
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    white-space: nowrap;
+    margin-right: 17px;
+    margin-left: -140px;
+  }
+
+  .checkstatus-text {
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    white-space: nowrap;
+    margin-right: 23px;
+    margin-left: -140px;
+  }
+}
 @media (max-width: 767px) {
-  .main__menu::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 190px;
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(
-      270deg,
-      #f8f8f8 16.84%,
-      rgba(248, 248, 248, 0.0001) 100%
-    );
+  .main__repair-block {
+    display: none;
   }
 }

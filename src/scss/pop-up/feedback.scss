@@ -1,8 +1,9 @@
 @import 'src/scss/variables';
 .feedback {
   width: 320px;
-  height: 676px;
-  position: absolute;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #fff;
@@ -12,7 +13,6 @@
   transition-duration: 0.5s;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
     16px 0px 52px rgba(14, 24, 80, 0.2);
-  overflow: hidden;
 }
 .close-button {
   margin: 24px 0 36px 16px;
@@ -21,7 +21,7 @@
 .feedback--open {
   opacity: 1;
   visibility: visible;
-  z-index: 6;
+  z-index: 7;
   transform: translateX(0);
 }
 

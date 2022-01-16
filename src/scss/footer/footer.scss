@@ -17,10 +17,35 @@
   margin-bottom: 5px;
 }
 
-.politics {
+.footer-politics {
   margin-bottom: 3px;
 }
 
 .offer {
   padding-bottom: 19px;
+}
+
+@media (min-width: 768px) {
+  .main-footer {
+    flex-direction: row;
+    height: 105px;
+    align-items: baseline;
+    text-align: left;
+    margin-left: 16px;
+  }
+  .copyright {
+    width: 600px;
+    margin: 0;
+    padding: 40px 0 0 0;
+  }
+  .footer-politics {
+    width: 600px;
+    margin: 0;
+    padding: 40px 0 0 0;
+  }
+
+  .offer {
+    margin: 0;
+    padding: 40px 0 0 0;
+  }
 }

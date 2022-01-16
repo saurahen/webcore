@@ -1,7 +1,7 @@
 @import 'src/scss/variables';
 .swiper-technics {
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   &::after {
     content: '';
     position: absolute;
@@ -67,4 +67,73 @@
 
 .swiper-pagination-technics {
   text-align: center;
+}
+
+.technics-btn-button--active::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 2px solid #41f6d7;
+  border-radius: 2px;
+  border-top: inherit;
+  border-left: inherit;
+  transform: rotate(-135deg);
+  left: 25px;
+  top: 5px;
+}
+.technics-btn-button--active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 2px solid #41f6d7;
+  border-radius: 2px;
+  border-top: inherit;
+  border-left: inherit;
+  transform: rotate(-135deg);
+  left: 25px;
+  top: 11px;
+}
+
+@media (min-width: 768px) {
+  .swiper-technics {
+    &::after {
+      content: none;
+    }
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      height: 185px;
+      width: 97%;
+      padding: 0;
+      align-items: center;
+      margin: 0 auto;
+    }
+    &__slide {
+      margin: auto;
+      height: 185px;
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+    &__link {
+      width: 190px;
+    }
+  }
+  .swiper-pagination-technics {
+    display: none;
+  }
+}
+
+.swiper-technics__wrapper--open {
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .technics-btn {
+    display: none;
+  }
 }

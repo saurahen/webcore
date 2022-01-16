@@ -1,7 +1,8 @@
 .modal-call {
   width: 320px;
-  height: 676px;
-  position: absolute;
+  overflow: auto;
+  height: 100%;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #fff;
@@ -16,6 +17,6 @@
 .modal-call--open {
   opacity: 1;
   visibility: visible;
-  z-index: 6;
+  z-index: 7;
   transform: translateX(0);
 }

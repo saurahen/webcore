@@ -4,13 +4,25 @@
 @import 'header/header';
 @import 'main/main';
 @import 'footer/footer';
+@import 'pop-up/overlay';
 @import 'pop-up/burger';
 @import 'pop-up/feedback';
 @import 'pop-up/call';
 
 .wrapper {
+  position: relative;
   height: 100%;
   background-color: $bg-primary;
   max-width: rem(1120);
   margin: 0 auto;
+}
+
+.body--overflow {
+  overflow: hidden;
+}
+
+@media (min-width: 1760px) {
+  .wrapper {
+    transform: translateX(160px);
+  }
 }

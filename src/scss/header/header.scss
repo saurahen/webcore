@@ -15,26 +15,27 @@
   }
 
   &__call {
+    margin-right: 16px;
   }
 
   &__chat {
-  }
-
-  &__profile {
+    margin-right: 16px;
   }
 
   &__repair {
     margin-right: 16px;
   }
+}
 
-  &__check-status {
-  }
+.contact {
+  display: flex;
+  margin-left: auto;
+  margin-right: 42px;
 }
 
 .repair-block {
   position: relative;
   display: flex;
-  margin-left: auto;
   margin-right: 15px;
 }
 .repair-block::before {
@@ -57,8 +58,40 @@
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+  .header {
+    &__burger {
+      margin-left: 23px;
+    }
+    &__logo {
+      position: relative;
+      margin-left: 40px;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 32px;
+        border-top: 2px solid #eaeaea;
+        transform: rotate(90deg);
+        left: -35px;
+        top: 30px;
+      }
+    }
+  }
+  .repair-block {
+    margin-right: 25px;
+  }
+}
 @media (max-width: 767px) {
   .contact {
     display: none;
+  }
+  .repair-block {
+    margin-left: auto;
   }
 }

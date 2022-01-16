@@ -1,5 +1,8 @@
+let swiperBrand;
+let swiperTechnics;
+let swiperPrice;
 function initSwiperBrand() {
-  const swiperBrand = new Swiper('.swiper-brand', {
+  swiperBrand = new Swiper('.swiper-brand', {
     pagination: {
       el: '.swiper-pagination-brand',
       clickable: true,
@@ -9,7 +12,7 @@ function initSwiperBrand() {
   });
 }
 function initSwiperTechnics() {
-  const swiperTechnics = new Swiper('.swiper-technics', {
+  swiperTechnics = new Swiper('.swiper-technics', {
     pagination: {
       el: '.swiper-pagination-technics',
       clickable: true,
@@ -19,7 +22,7 @@ function initSwiperTechnics() {
   });
 }
 function initSwiperPrice() {
-  const swiperPrice = new Swiper('.swiper-price', {
+  swiperPrice = new Swiper('.swiper-price', {
     pagination: {
       el: '.swiper-pagination-price',
       clickable: true,
@@ -40,5 +43,11 @@ function changes(screen) {
     initSwiperBrand();
     initSwiperTechnics();
     initSwiperPrice();
+  } else if (!screen.matches) {
+    if (swiperBrand !== undefined) {
+      swiperBrand.destroy(true, true);
+      swiperTechnics.destroy(true, true);
+      swiperPrice.destroy(true, true);
+    }
   }
 }
