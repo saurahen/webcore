@@ -1351,6 +1351,14 @@ button:hover {
   .textarea {
     width: 376px;
   }
+
+  .politics {
+    margin: 0 0 26px 32px;
+  }
+
+  .send-btn {
+    transform: translate(230px, 3px);
+  }
 }
 .modal-call {
   width: 320px;
