@@ -1,4 +1,4 @@
-const burger = document.querySelector('.burger');
+const modal = document.querySelector('.burger');
 const overlay = document.querySelector('.overlay');
 const burgerOverlay = document.querySelector('.burger__overlay');
 const burgerBtnOpen = document.querySelector('.header__burger');
@@ -36,24 +36,25 @@ burgerOverlay.addEventListener('click', function () {
   feedback.classList.remove('feedback--open');
   call.classList.remove('modal-call--open');
   overlay.classList.remove('o--open');
+  body.classList.remove('body--overflow');
 });
 
 // BURGER
 burgerBtnOpen.addEventListener('click', function () {
-  burger.classList.add('burger--open');
+  modal.classList.add('burger--open');
   overlay.classList.add('o--open');
   if (screenM.matches) {
     body.classList.add('body--overflow');
   }
 });
 burgerBtnClose.addEventListener('click', function () {
-  burger.classList.remove('burger--open');
+  modal.classList.remove('burger--open');
   overlay.classList.remove('o--open');
   burgerOverlay.classList.remove('o--open');
   body.classList.remove('body--overflow');
 });
 overlay.addEventListener('click', function () {
-  burger.classList.remove('burger--open');
+  modal.classList.remove('burger--open');
   overlay.classList.remove('o--open');
   burgerOverlay.classList.remove('o--open');
   body.classList.remove('body--overflow');
@@ -68,11 +69,9 @@ for (let i = 0; i < chatBtnAll.length; i++) {
     if (screenM.matches) {
       body.classList.add('body--overflow');
     }
-    burger.classList.remove('burger--open');
+    modal.classList.remove('burger--open');
     call.classList.remove('modal-call--open');
-    if (screen.matches) {
-      burgerOverlay.classList.add('o--open');
-    }
+    burgerOverlay.classList.add('o--open');
   });
 }
 
@@ -85,10 +84,23 @@ for (let i = 0; i < callBtnAll.length; i++) {
     if (screenM.matches) {
       body.classList.add('body--overflow');
     }
-    burger.classList.remove('burger--open');
+    modal.classList.remove('burger--open');
     feedback.classList.remove('feedback--open');
-    if (screen.matches) {
-      burgerOverlay.classList.add('o--open');
-    }
+
+    burgerOverlay.classList.add('o--open');
   });
+}
+
+// Если модалка открыта в разрешение меньше 1760 и потом растягивается до 1760
+// Чтобы листать страницу
+
+if (matchMedia) {
+  screen.addListener(changes);
+  changes(screen);
+}
+
+function changes() {
+  if (screen.matches) {
+    body.classList.remove('body--overflow');
+  }
 }

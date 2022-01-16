@@ -25,12 +25,6 @@
   transform: translateX(0);
 }
 
-.modal {
-}
-
-.button {
-}
-
 .modal-title {
   position: relative;
   margin: 0 0 20px 16px;
@@ -119,5 +113,25 @@
     transform: rotate(45deg);
     right: 18px;
     top: 9px;
+  }
+}
+@media (min-width: 1440px) {
+  .feedback {
+    width: 440px;
+  }
+  .form {
+    margin-left: 32px;
+  }
+  .input {
+    width: 376px;
+  }
+  .textarea {
+    width: 376px;
+  }
+  .politics {
+    margin: 0 0 26px 32px;
+  }
+  .send-btn {
+    transform: translate(230px, 3px);
   }
 }
